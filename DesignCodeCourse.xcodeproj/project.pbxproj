@@ -45,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		346DA744251884E1002BCD18 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				347E9A15251879EA006F6948 /* Course.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		349600CB251482D0003A1367 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -66,7 +74,6 @@
 		34BC64AD25144BBF003DD298 = {
 			isa = PBXGroup;
 			children = (
-				347E9A15251879EA006F6948 /* Course.swift */,
 				34BC64B825144BBF003DD298 /* DesignCodeCourse */,
 				34BC64B725144BBF003DD298 /* Products */,
 			);
@@ -85,6 +92,7 @@
 			children = (
 				34BC64B925144BBF003DD298 /* DesignCodeCourseApp.swift */,
 				349600CB251482D0003A1367 /* Navigation */,
+				346DA744251884E1002BCD18 /* Model */,
 				349600CD251482F8003A1367 /* Items */,
 				34BC64CC25145981003DD298 /* CourseView.swift */,
 				349600CF2514845D003A1367 /* CourseList.swift */,
