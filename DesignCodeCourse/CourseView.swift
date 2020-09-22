@@ -15,37 +15,71 @@ struct CourseView: View {
     
     
     var body: some View {
-        ZStack {
+        ZStack{
             ScrollView {
-                VStack(spacing: 20) {
+                LazyVGrid(
+                    columns: [
+                        GridItem(.adaptive(minimum: 160), spacing: 16)
+                    ],
+                    spacing: 16){
                     ForEach(courses) { item in
-                        CourseItem(course: selectedItem!)
-                            .matchedGeometryEffect(id: selectedItem!.id, in: namespace, isSource: !show)
-                            .frame(width: 335, height: 250)
-                            .onTapGesture {
-                                withAnimation(.spring()) {
-                                    show.toggle()
-                                    selectedItem = item
-                                    isDisabled = true
+                        VStack {
+                            CourseItem(course: item)
+                                .matchedGeometryEffect(id: item.id, in: namespace, isSource: !show)
+                                .frame(height: 250)
+                                .onTapGesture {
+                                    withAnimation(.spring()) {
+                                        show.toggle()
+                                        selectedItem = item
+                                        isDisabled = true
+                                    }
                                 }
-                            }
-                            .disabled(isDisabled)
+                                .disabled(isDisabled)
+                        }
+                        .matchedGeometryEffect(id: "container\(item.id)", in: namespace)
                     }
-                    
-                    
-                    
-//                    CourseItem()
-//                        .frame(width: 335, height: 250)
+
                 }
+                
+                .padding(16)
                 .frame(maxWidth: .infinity)
             }
 
+            .zIndex(/*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
             
             if selectedItem != nil  {
-                ScrollView {
-                    CourseItem(course: selectedItem!)
-                        .matchedGeometryEffect(id: selectedItem!.id, in: namespace)
-                        .frame(height: 300)
+                ZStack(alignment: .topTrailing)  {
+                    VStack {
+                        ScrollView {
+                            CourseItem(course: selectedItem!)
+                                .matchedGeometryEffect(id: selectedItem!.id, in: namespace)
+                                .frame(height: 300)
+                                .onTapGesture {
+                                    withAnimation(.spring()) {
+                                        show.toggle()
+                                        selectedItem = nil
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                            isDisabled = false
+                                        }
+                                        isDisabled = false
+                                    }
+                                }
+                            VStack {
+                                ForEach(0 ..< 20) { item in
+                                    CourseRow()
+                                }
+                            }
+                            .padding()
+                        }
+                    }
+                    .background(Color("Background 1"))
+                    .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
+                    .matchedGeometryEffect(id: "container\(selectedItem!.id)", in: namespace)
+                    .edgesIgnoringSafeArea(.all)
+                   
+                    
+                    CloseButton()
+                        .padding(.trailing, 16)
                         .onTapGesture {
                             withAnimation(.spring()) {
                                 show.toggle()
@@ -56,29 +90,10 @@ struct CourseView: View {
                                 isDisabled = false
                             }
                         }
-                    VStack {
-                        ForEach(0 ..< 20) { item in
-                            CourseRow()
-                        }
-                    }
-                    .padding()
                 }
-                .background(Color("Background 1"))
-                .transition(
-                    .asymmetric(insertion: AnyTransition
-                                    .opacity
-                                    .animation(Animation.spring()
-                                                        .delay(0.3)),
-                                removal: AnyTransition
-                                    .opacity
-                                    .animation(.spring()))
-                )
-                .edgesIgnoringSafeArea(.all)
+                .zIndex(2)
             }
-            //            }
         }
-        
-//        .animation(.spring())
     }
 }
 

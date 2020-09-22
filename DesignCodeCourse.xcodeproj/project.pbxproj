@@ -17,6 +17,7 @@
 		34BC64CA25145757003DD298 /* CourseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BC64C925145757003DD298 /* CourseRow.swift */; };
 		34BC64CD25145981003DD298 /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BC64CC25145981003DD298 /* CourseView.swift */; };
 		34BC64D025145AF4003DD298 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BC64CF25145AF4003DD298 /* Sidebar.swift */; };
+		34CCE3302519A0AA000CF97D /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CCE32F2519A0AA000CF97D /* CloseButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		34BC64C925145757003DD298 /* CourseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRow.swift; sourceTree = "<group>"; };
 		34BC64CC25145981003DD298 /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
 		34BC64CF25145AF4003DD298 /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
+		34CCE32F2519A0AA000CF97D /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				346DA744251884E1002BCD18 /* Model */,
 				349600CD251482F8003A1367 /* Items */,
 				34BC64CC25145981003DD298 /* CourseView.swift */,
+				34CCE32F2519A0AA000CF97D /* CloseButton.swift */,
 				349600CF2514845D003A1367 /* CourseList.swift */,
 				34BC64BD25144BC0003DD298 /* Assets.xcassets */,
 				34BC64C225144BC0003DD298 /* Info.plist */,
@@ -183,6 +186,7 @@
 				347E9A16251879EA006F6948 /* Course.swift in Sources */,
 				34BC64D025145AF4003DD298 /* Sidebar.swift in Sources */,
 				349600C925148192003A1367 /* CourseItem.swift in Sources */,
+				34CCE3302519A0AA000CF97D /* CloseButton.swift in Sources */,
 				34BC64BC25144BBF003DD298 /* ContentView.swift in Sources */,
 				34BC64CA25145757003DD298 /* CourseRow.swift in Sources */,
 				34BC64BA25144BBF003DD298 /* DesignCodeCourseApp.swift in Sources */,
