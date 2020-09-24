@@ -28,7 +28,7 @@ struct CourseView: View {
                                 .matchedGeometryEffect(id: item.id, in: namespace, isSource: !show)
                                 .frame(height: 250)
                                 .onTapGesture {
-                                    withAnimation(.spring()) {
+                                    withAnimation(.spring(response: 0.5, dampingFraction: 0.7, blendDuration: 0)) {
                                         show.toggle()
                                         selectedItem = item
                                         isDisabled = true
@@ -45,37 +45,12 @@ struct CourseView: View {
                 .frame(maxWidth: .infinity)
             }
 
-            .zIndex(/*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
+            .zIndex(1)
             
             if selectedItem != nil  {
                 ZStack(alignment: .topTrailing)  {
-                    VStack {
-                        ScrollView {
-                            CourseItem(course: selectedItem!)
-                                .matchedGeometryEffect(id: selectedItem!.id, in: namespace)
-                                .frame(height: 300)
-                                .onTapGesture {
-                                    withAnimation(.spring()) {
-                                        show.toggle()
-                                        selectedItem = nil
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                            isDisabled = false
-                                        }
-                                        isDisabled = false
-                                    }
-                                }
-                            VStack {
-                                ForEach(0 ..< 20) { item in
-                                    CourseRow()
-                                }
-                            }
-                            .padding()
-                        }
-                    }
-                    .background(Color("Background 1"))
-                    .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
-                    .matchedGeometryEffect(id: "container\(selectedItem!.id)", in: namespace)
-                    .edgesIgnoringSafeArea(.all)
+                    
+                    CourseDetail(course: selectedItem!, namespace: namespace)
                    
                     
                     CloseButton()

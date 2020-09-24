@@ -11,7 +11,8 @@ struct CourseRow: View {
     var body: some View {
         HStack {
         Image(systemName: "paperplane.circle.fill")
-            .renderingMode(.original)
+            .renderingMode(.template)
+            .frame(width: 48.0, height: 48.0)
             .imageScale(/*@START_MENU_TOKEN@*/.medium/*@END_MENU_TOKEN@*/)
             .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.blue/*@END_MENU_TOKEN@*/)
             .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
@@ -26,8 +27,10 @@ struct CourseRow: View {
                     .foregroundColor(.secondary)
                     
             }
+            Spacer()
         }
-        .font(.system(size: 34, weight: .bold, design: .rounded))
+       
+//        .font(.system(size: 34, weight: .bold, design: .rounded))
     }
 }
 
