@@ -11,6 +11,8 @@ struct CourseDetail: View {
     var course: Course = courses[0]
     var namespace: Namespace.ID
     
+    @State var showModal = false
+    
     var body: some View {
         
         VStack {
@@ -18,19 +20,16 @@ struct CourseDetail: View {
                 CourseItem(course: course)
                     .matchedGeometryEffect(id: course.id, in: namespace)
                     .frame(height: 300)
-//                                .onTapGesture {
-//                                    withAnimation(.spring()) {
-//                                        show.toggle()
-//                                        selectedItem = nil
-//                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-//                                            isDisabled = false
-//                                        }
-//                                        isDisabled = false
-//                                    }
-//                                }
                 VStack {
                     ForEach(courseSections) { item in
                         CourseRow(item: item)
+                            .sheet(isPresented: $showModal) {
+//                                CourseList()
+                                CourseSectionDetail()
+                            }
+                            .onTapGesture {
+                                showModal = true
+                            }
                         Divider()
                     }
                 }
