@@ -29,8 +29,9 @@ struct CourseDetail: View {
 //                                    }
 //                                }
                 VStack {
-                    ForEach(0 ..< 20) { item in
-                        CourseRow()
+                    ForEach(courseSections) { item in
+                        CourseRow(item: item)
+                        Divider()
                     }
                 }
                 .padding()
