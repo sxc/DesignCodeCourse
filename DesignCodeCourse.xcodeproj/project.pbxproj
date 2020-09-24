@@ -16,6 +16,8 @@
 		3495C67B251C349300FB04AB /* TutorialSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3495C674251C349300FB04AB /* TutorialSection.swift */; };
 		3495C67C251C349300FB04AB /* CourseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3495C675251C349300FB04AB /* CourseSection.swift */; };
 		3495C67D251C349300FB04AB /* Livestream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3495C676251C349300FB04AB /* Livestream.swift */; };
+		3495C681251C38C300FB04AB /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3495C680251C38C300FB04AB /* VisualEffectBlur.swift */; };
+		3495C68A251C3F9D00FB04AB /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3495C689251C3F9D00FB04AB /* TabBar.swift */; };
 		349600C925148192003A1367 /* CourseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349600C825148192003A1367 /* CourseItem.swift */; };
 		349600D02514845D003A1367 /* CourseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349600CF2514845D003A1367 /* CourseList.swift */; };
 		34BC64BA25144BBF003DD298 /* DesignCodeCourseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BC64B925144BBF003DD298 /* DesignCodeCourseApp.swift */; };
@@ -38,6 +40,8 @@
 		3495C674251C349300FB04AB /* TutorialSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialSection.swift; sourceTree = "<group>"; };
 		3495C675251C349300FB04AB /* CourseSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseSection.swift; sourceTree = "<group>"; };
 		3495C676251C349300FB04AB /* Livestream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Livestream.swift; sourceTree = "<group>"; };
+		3495C680251C38C300FB04AB /* VisualEffectBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
+		3495C689251C3F9D00FB04AB /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		349600C825148192003A1367 /* CourseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItem.swift; sourceTree = "<group>"; };
 		349600CF2514845D003A1367 /* CourseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseList.swift; sourceTree = "<group>"; };
 		34BC64B625144BBF003DD298 /* DesignCodeCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCodeCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,11 +82,21 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		3495C67F251C38A500FB04AB /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3495C680251C38C300FB04AB /* VisualEffectBlur.swift */,
+			);
+			name = iOS;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		349600CB251482D0003A1367 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
 				34BC64CF25145AF4003DD298 /* Sidebar.swift */,
 				34BC64BB25144BBF003DD298 /* ContentView.swift */,
+				3495C689251C3F9D00FB04AB /* TabBar.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -115,6 +129,7 @@
 		34BC64B825144BBF003DD298 /* DesignCodeCourse */ = {
 			isa = PBXGroup;
 			children = (
+				3495C67F251C38A500FB04AB /* iOS */,
 				34BC64B925144BBF003DD298 /* DesignCodeCourseApp.swift */,
 				349600CB251482D0003A1367 /* Navigation */,
 				346DA744251884E1002BCD18 /* Model */,
@@ -209,6 +224,7 @@
 			files = (
 				347E9A16251879EA006F6948 /* Course.swift in Sources */,
 				34BC64D025145AF4003DD298 /* Sidebar.swift in Sources */,
+				3495C68A251C3F9D00FB04AB /* TabBar.swift in Sources */,
 				349600C925148192003A1367 /* CourseItem.swift in Sources */,
 				3495C66E251C326F00FB04AB /* CourseDetail.swift in Sources */,
 				3495C67C251C349300FB04AB /* CourseSection.swift in Sources */,
@@ -222,6 +238,7 @@
 				3495C679251C349300FB04AB /* GradientModel.swift in Sources */,
 				3495C678251C349300FB04AB /* Download.swift in Sources */,
 				3495C67A251C349300FB04AB /* LivestreamSection.swift in Sources */,
+				3495C681251C38C300FB04AB /* VisualEffectBlur.swift in Sources */,
 				34BC64CD25145981003DD298 /* CourseView.swift in Sources */,
 				349600D02514845D003A1367 /* CourseList.swift in Sources */,
 			);
